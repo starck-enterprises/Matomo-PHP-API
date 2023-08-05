@@ -1,5 +1,5 @@
 {
-	"name": "visualappeal/matomo-php-api",
+	"name": "starck-enterprises/matomo-php-api",
 	"description": "API wrapper for matomo",
 	"license": "MIT",
 	"require": {
