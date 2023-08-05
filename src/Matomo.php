@@ -838,7 +838,7 @@ class Matomo
             'hideMetricsDoc' => $hideMetricsDoc,
         ], $optional);
     }
-
+    
     /**
      * Get Api
      *
@@ -1797,6 +1797,27 @@ class Matomo
     ): mixed {
         return $this->_request('CustomVariables.getCustomVariablesValuesFromNameId', [
             'idSubtable' => $idSubtable,
+            'segment'    => $segment,
+        ], $optional);
+    }
+
+    /**
+     * Get custom report
+     *
+     * @param  int  $idCustomReport
+     * @param  string  $segment
+     * @param  array  $optional
+     *
+     * @return bool|object
+     * @@throws InvalidRequestException|JsonException|InvalidResponseException
+     */
+    public function getCustomReport(
+        int $idCustomReport,
+        string $segment = '',
+        array $optional = []
+    ): mixed {
+        return $this->_request('CustomReports.getCustomReport', [
+            'idCustomReport' => $idCustomReport,
             'segment'    => $segment,
         ], $optional);
     }
